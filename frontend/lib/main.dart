@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'screens/register_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const NoteApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class NoteApp extends StatelessWidget {
+  const NoteApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Note App',
+      theme: ThemeData.dark(),
+      home: const RegisterScreen(),
+    );
   }
 }
