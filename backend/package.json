@@ -4,7 +4,7 @@
   "main": "dist/app.js",
   "type": "module",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm ./src/server.ts\"",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:studio": "npx prisma studio"
@@ -23,6 +23,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19"
+    "@types/cors": "^2.8.19",
+    "nodemon": "^2.0.22",
+    "ts-node-dev": "^2.0.0"
   }
 }
